@@ -1,4 +1,4 @@
-def mult_tuple(tuple1, tuple2):
+def multi_tuple(tuple1, tuple2):
     l = []
     for i in tuple1:
         for x in tuple2:
@@ -10,4 +10,4 @@ def mult_tuple(tuple1, tuple2):
 
 first_tuple = (1, 2)
 second_tuple = (4, 5)
-print(mult_tuple(first_tuple, second_tuple))
+print(multi_tuple(first_tuple, second_tuple))

@@ -1,3 +1,4 @@
+
 import calendar
 
 # 0 = monday - שני
@@ -8,18 +9,25 @@ import calendar
 # 5 = Saturday - שבת
 # 6 = Sunday - ראשון
 
+#dd/mm/yyyy
 
-a = int(input("year: "))
-b = int(input("month: "))
-c = int(input("day: "))
+input_date = input("Input date in foramt dd/mm/yyyy: ").split("/")
 
-calendar.weekday(a, b, c)
+#DAY
+day = int(input_date[0])
 
-x = calendar.weekday(a, b, c)
+#MONTH
+month = int(input_date[1])
+
+#YEAR
+year = int(input_date[2])
+
+
+x = calendar.weekday(year, month, day)
 
 if x == 0:
     print("Monday")
-     
+
 elif x == 1:
     print("Tuesday")
 
@@ -28,16 +36,16 @@ elif x == 2:
 
 elif x == 3:
     print("Thursday")
-    
+
 elif x == 4:
     print("Friday")
-    
+
 elif x == 5:
     print("Saturday")
-     
+
 elif x == 6:
     print("Sunday")
-     
+
 else:
     print("none")
 

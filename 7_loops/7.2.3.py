@@ -1,8 +1,7 @@
 def numbers_letters_count(my_str):
-    num = 0
-    for i in my_str:
-            if i.isdigit():
-                num +=1
+    num = sum(bool(i.isdigit())
+          for i in my_str)
+    print(num)
     return [num] + [(len(my_str) - num)]
 
 

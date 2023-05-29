@@ -1,16 +1,9 @@
 def sort_anagrams(list_of_strings):
     a = []
     for word in list_of_strings:
-        b = []
-        for i in list_of_strings:
-            if sorted(word) == sorted(i):
-                b.append(i)
+        b = [i for i in list_of_strings if sorted(word) == sorted(i)]
         if b not in a:
             a.append(b)
-                
-               
-
-
     return a
        
        
