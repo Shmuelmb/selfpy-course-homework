@@ -1,12 +1,31 @@
 def show_hidden_word(secret_word, old_letters_guessed):
-    em_list = [s_s for s_s in secret_word if s_s not in old_letters_guessed]
-    true_c = ''.join(em_list)
-    for x in secret_word:
-        if x in true_c: # in - זה ההבדל בין הדרך הזו לדרך השניה 
-            secret_word = (secret_word.replace(x,"_"))
-    return " ".join(secret_word)
-      
-   
+    """
+    Generates a string with the hidden word, where unguessed letters are replaced by underscores.
+
+    Parameters:
+    - secret_word (str): The secret word to be guessed.
+    - old_letters_guessed (list): A list of letters guessed by the player.
+
+    Returns:
+    - hidden_word (str): The hidden word with underscores for unguessed letters.
+
+    Example:
+    secret_word = "shmuel"
+    old_letters_guessed = ["a", "m", "p", "s"]
+    print(show_hidden_word(secret_word, old_letters_guessed))
+    # Output: "_hmu__"
+    """
+
+    hidden_word = ""
+    for letter in secret_word:
+        if letter in old_letters_guessed:
+            hidden_word += letter
+        else:
+            hidden_word += "_"
+
+    return hidden_word
+
+
 secret_word = "shmuel"
-old_letters_guessed = ["a","m","p","s"]
+old_letters_guessed = ["a", "m", "p", "s"]
 print(show_hidden_word(secret_word, old_letters_guessed))

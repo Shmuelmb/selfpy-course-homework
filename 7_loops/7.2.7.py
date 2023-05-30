@@ -1,18 +1,44 @@
 def arrow(my_char, max_length):
-   em_list = []
-   for str_search in my_char:
-      yp = range(max_length)
-      h = max_length - 1
-      em_list.extend(str_search * range_search for range_search in yp
-                     if range_search != 0)
-      em_list.append(str_search*max_length)
+    """
+    Generates an arrow pattern using a specified character and maximum length.
 
-      for _ in yp:
-         if h != max_length and h > 0:
-             em_list.append(str_search*h)
-             h -=1
+    The function constructs the arrow pattern by iteratively building each line
+    of the pattern based on the current index.
+
+    Parameters:
+    - my_char (str): The character to be used for constructing the arrow pattern.
+    - max_length (int): The maximum length of the arrow pattern.
+
+    Returns:
+    - pattern (str): The arrow pattern represented as a string.
+
+    Example:
+    arrow("*", 5)
+    # Output:
+    # *
+    # **
+    # ***
+    # ****
+    # *****
+    # ****
+    # ***
+    # **
+    # *
+    """
+
+    pattern = ""
+
+    for i in range(1, max_length + 1):
+        pattern += my_char * i + "\n"
+
+    pattern += my_char * max_length + "\n"
+
+    for i in range(max_length - 1, 0, -1):
+        pattern += my_char * i + "\n"
+
+    return pattern
 
 
-   return '\n'.join(em_list)
+print(arrow("*", 5))
 
-print(arrow("*",5))
+print(arrow("*", 5))

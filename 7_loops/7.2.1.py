@@ -1,5 +1,22 @@
-def is_greater(my_list, n):
-    return [num for num in my_list if num > n]
+def is_greater(numbers, threshold):
+    """
+    Returns a new list containing numbers greater than the given threshold.
 
+    Parameters:
+    - numbers (list): A list of numbers.
+    - threshold (int): The threshold value.
 
-is_greater([1, 30, 25, 60, 27, 28], 28)
+    Returns:
+    - greater_numbers (list): A list of numbers greater than the threshold.
+
+    Example:
+    is_greater([1, 30, 25, 60, 27, 28], 28)
+    # Output: [30, 60, 27]
+    """
+    
+    greater_numbers = []
+    for num in numbers:
+        if num > threshold:
+            greater_numbers.append(num)
+    return greater_numbers
+

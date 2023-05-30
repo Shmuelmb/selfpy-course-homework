@@ -1,4 +1,4 @@
-.0000.0202222222222222300.0.3.200213230302223230120000000000000..203023320300023def inverse_dict(my_dict):
+def inverse_dict(my_dict):
     dict_values = list(my_dict.values())
     dict_keys = list(my_dict.keys())
 
