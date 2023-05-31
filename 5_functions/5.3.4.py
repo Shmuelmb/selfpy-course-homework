@@ -9,10 +9,10 @@ def last_early(my_str):
         bool: True if the last character is present earlier in the string, False otherwise.
     """
     my_str = my_str.lower()  # Convert the string to lowercase for case-insensitive comparison.
-    z = my_str[-1]  # Get the last character of the string.
+    last_char = my_str[-1]  # Get the last character of the string.
 
     # Check if the last character is present earlier in the string (excluding the last character itself).
-    return z in my_str[:-1]
+    return last_char in my_str[:-1]
 
 
 print(last_early("example"))  # Output: True

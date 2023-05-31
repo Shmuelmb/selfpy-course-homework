@@ -8,8 +8,8 @@ x = input("Enter temperature: ")
 if "f" in x.lower():
     # Fahrenheit to Celsius conversion
     c = (float(x[:-1]) - 32) * 5 / 9
-    print(f"The temperature in Celsius is: {c:.2f}")
-else:
+    print(f"The temperature in Celsius is: {c:.2f}C")
+if "c" in x.lower():
     # Celsius to Fahrenheit conversion
     f = (float(x[:-1]) * 9 / 5) + 32
-    print(f"The temperature in Fahrenheit is: {f:.2f}")
+    print(f"The temperature in Fahrenheit is: {f:.2f}F")

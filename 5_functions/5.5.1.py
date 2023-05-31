@@ -13,7 +13,7 @@ def is_valid_input(letter_guessed):
     """
 
     return (
-            len(letter_guessed) <= 1
+            len(letter_guessed) <= 2
             and letter_guessed not in string.punctuation
             and letter_guessed not in string.digits
     )

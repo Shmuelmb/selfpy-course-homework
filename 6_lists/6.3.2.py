@@ -13,8 +13,7 @@ def longest(my_list):
         >> print(longest(list1))
         birthday
     """
-    my_list.sort(key=len)
-    return my_list[-1]
+    return(max(my_list, key=len))
 
 
 list1 = ["111", "234", "2000", "goru", "birthday", "09"]

@@ -15,7 +15,8 @@ def extend_list_x(list_x, list_y):
         >> print(extend_list_x(x, y))
         [1, 2, 3, 4, 5, 6]
     """
-    return list_y + list_x
+    list_y[3:] = list_x
+    return list_y
 
 
 x = [4, 5, 6]

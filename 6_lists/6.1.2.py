@@ -19,3 +19,5 @@ def shift_left(my_list):
 
 print(shift_left("123"))
 
+
+

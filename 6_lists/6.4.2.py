@@ -31,3 +31,5 @@ def try_update_letter_guessed(letter_guessed, old_letters_guessed):
 # Example usage:
 old_letters = ["b", "a", "c"]
 print(try_update_letter_guessed("a", old_letters))
+
+# And what if he entered a capital letter?

@@ -1,11 +1,14 @@
 # Prompting the user to enter three numbers
-print("Enter 3 numbers to check the remainder of their sum when divided by 3")
-num_1 = int(input("Enter the first number: "))
-num_2 = int(input("Enter the second number: "))
-num_3 = int(input("Enter the third number: "))
+# print("Enter 3 numbers to check the remainder of their sum when divided by 3")
+# num_1 = int(input("Enter the first number: "))
+# num_2 = int(input("Enter the second number: "))
+# num_3 = int(input("Enter the third number: "))
+input_user = input(">>> Enter three digits (each digit for one pig):")
+sum_numbers = 0
+for char in input_user:
+    sum_numbers += int(char)
 
 # Calculating the sum of the three numbers
-sum_numbers = num_1 + num_2 + num_3
 
 # Performing division to check the remainder
 division_without_remainder = sum_numbers // 3

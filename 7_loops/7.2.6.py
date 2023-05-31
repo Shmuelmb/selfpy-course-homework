@@ -1,14 +1,17 @@
-import string
 
 print("welcome my bro, this is my crazy program")
 input_from_user = (input(
     "your list (for example -> Milk, Cottage, Tomatoes): "))  # Input the list as a string (e.g., Milk, Cottage, Tomatoes)
 
-list_market = input_from_user.split(",")  # Convert the string to a list by splitting on commas
+list_market = []
+for item in input_from_user.split(','):
+    list_market.append(item.strip())   # Convert the string to a list by splitting on commas and remove spaces
+
+print("list_market", list_market) 
 
 print("the options are:\n 1-> show your list\n 2-> show length of list\n 3-> fined number in list\
        \n 4-> find his count of number the user input in the list\n 5->remove item from the list\n 6-> append item to the list\
-       \n 7-> append\n 8-> remove duplicate item from list\n 9->exit")
+       \n 7-> Display defective items\n 8-> remove duplicate item from list\n 9->exit")
 
 while True:
     num = int(input("choice your num: "))
@@ -55,11 +58,8 @@ while True:
             # Display defective items
             defective_items = []
             for items in list_market:
-                if len(items) < 3:
+                if len(items) < 3 or not str(items).isalpha():
                     defective_items.append(items)
-                for item in items:
-                    if item.isdigit() or item in string.punctuation:
-                        defective_items.append(items)
             print(defective_items)
 
         case 8:
