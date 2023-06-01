@@ -7,7 +7,6 @@ list_market = []
 for item in input_from_user.split(','):
     list_market.append(item.strip())   # Convert the string to a list by splitting on commas and remove spaces
 
-print("list_market", list_market) 
 
 print("the options are:\n 1-> show your list\n 2-> show length of list\n 3-> fined number in list\
        \n 4-> find his count of number the user input in the list\n 5->remove item from the list\n 6-> append item to the list\
